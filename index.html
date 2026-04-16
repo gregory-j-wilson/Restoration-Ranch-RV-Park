@@ -229,6 +229,7 @@
     /* ─── Disable parallax on mobile (perf + iOS fix) ───── */
     @media (max-width: 768px) {
       #hero, #contact { background-attachment: scroll; }
+      .gallery-main-img { height: 655px !important; }
     }
 
     /* ─── Content images ────────────────────────────────── */
@@ -354,7 +355,7 @@
         <div class="fade-in">
           <div class="relative">
             <img src="img/will.jpeg" alt="Will &amp; Jamie Wilson"
-                 class="rounded-sm shadow-2xl w-full object-cover h-80 border-4 border-dust" />
+                 class="rounded-sm shadow-2xl w-full object-cover border-4 border-dust" style="height:390px;" />
             <!-- Caption badge -->
             <div class="absolute -bottom-4 -right-4 bg-rust text-cream font-heading text-xs uppercase tracking-widest px-4 py-2 rounded-sm shadow-lg">
               Ramona, OK
@@ -397,7 +398,7 @@
 
         <div class="fade-in order-1 md:order-2">
           <img src="img/4.jpeg" alt="Community at the ranch"
-               class="rounded-sm shadow-2xl w-full object-cover h-80 border-4 border-dust" />
+               class="rounded-sm shadow-2xl w-full object-cover h-80 md:h-[390px] border-4 border-dust" />
         </div>
 
       </div>
@@ -424,7 +425,7 @@
 
         <!-- Cards with photos -->
         <div class="feature-card fade-in">
-          <img src="img/hookup.jpeg" alt="Full Hookups" class="w-full h-44 object-cover" />
+          <img src="img/hookup.jpeg" alt="Full Hookups" class="w-full h-44 md:h-[355px] object-cover" />
           <div class="p-5">
             <div class="text-2xl mb-2">⚡</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Full Hookups</h4>
@@ -436,7 +437,7 @@
         </div>
 
         <div class="feature-card fade-in" style="transition-delay:0.1s">
-          <img src="img/9.jpeg" alt="Spacious Sites" class="w-full h-44 object-cover" />
+          <img src="img/9.jpeg" alt="Spacious Sites" class="w-full h-44 md:h-[355px] object-cover" />
           <div class="p-5">
             <div class="text-2xl mb-2">🏕️</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Secluded Park</h4>
@@ -447,7 +448,7 @@
         </div>
 
         <div class="feature-card fade-in" style="transition-delay:0.2s">
-          <img src="img/4.jpeg" alt="Community Garden" class="w-full h-44 object-cover" />
+          <img src="img/4.jpeg" alt="Community Garden" class="w-full h-44 md:h-[355px] object-cover" />
           <div class="p-5">
             <div class="text-2xl mb-2">🌿</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Community Garden</h4>
@@ -461,7 +462,7 @@
         <!-- Cards without photos -->
 
         <div class="feature-card fade-in" style="transition-delay:0.1s">
-          <img src="img/sunset.jpeg" alt="Oklahoma sunset views" class="w-full h-44 object-cover" />
+          <img src="img/sunset.jpeg" alt="Oklahoma sunset views" class="w-full h-44 md:h-[355px] object-cover" />
           <div class="p-6 h-full">
             <div class="text-2xl mb-2">🌄</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Scenic Oklahoma Views</h4>
@@ -473,7 +474,7 @@
         </div>
 
         <div class="feature-card fade-in" style="transition-delay:0.2s">
-          <img src="img/rv.jpeg" alt="Immaculate grounds" class="w-full h-44 object-cover" />
+          <img src="img/rv.jpeg" alt="Immaculate grounds" class="w-full h-44 md:h-[355px] object-cover" />
           <div class="p-5">
             <div class="text-2xl mb-2">🧹</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Immaculate Grounds</h4>
@@ -485,34 +486,53 @@
 
       </div>
 
-      <!-- Photo strip -->
-      <div class="grid grid-cols-3 gap-3 fade-in overflow-hidden rounded-sm">
-        <div class="overflow-hidden">
-          <img src="img/8.jpeg"      alt="Ranch life"         class="strip-img w-full h-44 object-cover" style="filter: brightness(1.7) saturate(1.25) contrast(1.22);" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="img/9.jpeg"      alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="img/10.jpeg"     alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="img/deer.jpeg"   alt="Wildlife at the ranch" class="strip-img w-full h-44 object-cover" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="img/sunset2.jpeg" alt="Oklahoma sunset"   class="strip-img w-full h-44 object-cover" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="img/6.jpeg"      alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="img/campfire.jpeg" alt="Campfire at the ranch" class="strip-img w-full h-44 object-cover" />
-        </div>
-        <div class="overflow-hidden">
-          <img src="img/11.jpeg"     alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       GALLERY
+  ════════════════════════════════════════════════════════ -->
+  <section style="background:#1a0e09; border-top: 2px dashed rgba(196,168,130,0.45); border-bottom: 2px dashed rgba(196,168,130,0.45); padding: 3.5rem 0;">
+    <div class="text-center mb-8 fade-in">
+      <h2 class="font-display text-cream text-3xl sm:text-4xl tracking-wide" style="text-shadow: 0 2px 12px rgba(0,0,0,0.5);">More from the Ranch&hellip;</h2>
+      <hr class="rope-divider mt-4 max-w-xs mx-auto opacity-50" />
+    </div>
+    <div class="flex flex-col gap-3">
+      <!-- Top 6 images — wider container, fixed height, stacks on mobile -->
+      <div class="max-w-[1362px] mx-auto w-full px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 fade-in">
+          <div class="overflow-hidden">
+            <img src="img/8.jpeg"      alt="Ranch life"         class="strip-img gallery-main-img w-full object-cover" style="height:485px; border-radius:0; border: 1px solid rgba(196,168,130,0.35); filter: brightness(1.7) saturate(1.25) contrast(1.22);" />
+          </div>
+          <div class="overflow-hidden">
+            <img src="img/9.jpeg"      alt="Ranch life"         class="strip-img gallery-main-img w-full object-cover" style="height:485px; border-radius:0; border: 1px solid rgba(196,168,130,0.35);" />
+          </div>
+          <div class="overflow-hidden">
+            <img src="img/10.jpeg"     alt="Ranch life"         class="strip-img gallery-main-img w-full object-cover" style="height:485px; border-radius:0; border: 1px solid rgba(196,168,130,0.35);" />
+          </div>
+          <div class="overflow-hidden">
+            <img src="img/6.jpeg"      alt="Ranch life"         class="strip-img gallery-main-img w-full object-cover" style="height:485px; border-radius:0; border: 1px solid rgba(196,168,130,0.35);" />
+          </div>
+          <div class="overflow-hidden">
+            <img src="img/campfire.jpeg" alt="Campfire at the ranch" class="strip-img gallery-main-img w-full object-cover" style="height:485px; border-radius:0; border: 1px solid rgba(196,168,130,0.35);" />
+          </div>
+          <div class="overflow-hidden">
+            <img src="img/11.jpeg"     alt="Ranch life"         class="strip-img gallery-main-img w-full object-cover" style="height:485px; border-radius:0; border: 1px solid rgba(196,168,130,0.35);" />
+          </div>
         </div>
       </div>
-
+      <!-- Bottom row — landscape images, natural height, stacks on mobile -->
+      <div class="max-w-[1362px] mx-auto w-full px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 fade-in">
+          <div class="overflow-hidden">
+            <img src="img/deer.jpeg"   alt="Wildlife at the ranch" class="strip-img w-full" style="border-radius:0; border: 1px solid rgba(196,168,130,0.35);" />
+          </div>
+          <div class="overflow-hidden">
+            <img src="img/sunset2.jpeg" alt="Oklahoma sunset"   class="strip-img w-full" style="border-radius:0; border: 1px solid rgba(196,168,130,0.35);" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -576,6 +596,12 @@
       <p class="font-body text-cream/45 text-base italic">
         Located near Ramona, Oklahoma &nbsp;·&nbsp; Office hours: Mon – Sat, 8 am – 6 pm
       </p>
+
+      <div class="mt-14 mb-2 flex justify-center">
+        <img src="img/will-and-jamie.jpeg" alt="Will &amp; Jamie Wilson"
+             class="rounded-sm shadow-2xl border-4 border-dust/40 object-cover"
+             style="width:100%; max-width:380px; height:320px;" />
+      </div>
 
     </div>
   </section>
