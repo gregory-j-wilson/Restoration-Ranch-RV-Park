@@ -230,14 +230,19 @@
       #hero, #contact { background-attachment: scroll; }
     }
 
+    /* ─── Content images ────────────────────────────────── */
+    img {
+      filter: brightness(1.28) contrast(1.18);
+    }
+
     /* ─── Photo strip hover ─────────────────────────────── */
     .strip-img {
       transition: transform 0.35s ease, filter 0.35s ease;
-      filter: brightness(0.88) saturate(0.9);
+      filter: brightness(1.3) saturate(1.15) contrast(1.2);
     }
     .strip-img:hover {
       transform: scale(1.04);
-      filter: brightness(1) saturate(1.1);
+      filter: brightness(1.45) saturate(1.25) contrast(1.22);
     }
   </style>
 </head>
@@ -321,7 +326,7 @@
 
         <div class="fade-in">
           <div class="relative">
-            <img src="img/2.jpeg" alt="Restoration Ranch"
+            <img src="img/will.jpeg" alt="Will &amp; Jamie Wilson"
                  class="rounded-sm shadow-2xl w-full object-cover h-80 border-4 border-dust" />
             <!-- Caption badge -->
             <div class="absolute -bottom-4 -right-4 bg-rust text-cream font-heading text-xs uppercase tracking-widest px-4 py-2 rounded-sm shadow-lg">
@@ -338,12 +343,11 @@
           </p>
           <p class="font-body text-lg leading-relaxed text-bark/90 mb-4">
             Will and Jamie Wilson personally oversee every corner of the park, ensuring each guest is
-            welcomed with genuine Oklahoma hospitality. With generous spacing between sites, serenity
-            isn't a selling point — it's just how things are out here.
+            welcomed with genuine Oklahoma hospitality. 
           </p>
           <p class="font-body text-lg leading-relaxed text-bark/90">
             Nestled close to <span class="font-semibold text-rust">Ramona, Oklahoma</span>, the ranch
-            sits amid rolling pastures and towering oaks — a true escape from the ordinary.
+            sits amid rolling pastures and wide open skies — a true escape from the ordinary.
           </p>
         </div>
       </div>
@@ -393,7 +397,7 @@
 
         <!-- Cards with photos -->
         <div class="feature-card fade-in">
-          <img src="img/2.jpeg" alt="Full Hookups" class="w-full h-44 object-cover" />
+          <img src="img/hookup.jpeg" alt="Full Hookups" class="w-full h-44 object-cover" />
           <div class="p-5">
             <div class="text-2xl mb-2">⚡</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Full Hookups</h4>
@@ -405,13 +409,12 @@
         </div>
 
         <div class="feature-card fade-in" style="transition-delay:0.1s">
-          <img src="img/5.jpeg" alt="Spacious Sites" class="w-full h-44 object-cover" />
+          <img src="img/9.jpeg" alt="Spacious Sites" class="w-full h-44 object-cover" />
           <div class="p-5">
             <div class="text-2xl mb-2">🏕️</div>
-            <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Spacious Sites</h4>
+            <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Secluded Park</h4>
             <p class="font-body text-bark/80 text-base leading-relaxed">
-              Extra-wide sites with generous separation between neighbors. Spread out, breathe
-              deep, and enjoy your slice of the ranch.
+              With only seven spaces in this smaller park, you're not going to feel like you've moved into another big town away from the one you just escaped!
             </p>
           </div>
         </div>
@@ -429,51 +432,9 @@
         </div>
 
         <!-- Cards without photos -->
-        <div class="feature-card fade-in">
-          <div class="p-6 h-full">
-            <div class="text-2xl mb-2">📶</div>
-            <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">High-Speed Wi-Fi</h4>
-            <p class="font-body text-bark/80 text-base leading-relaxed">
-              Reliable Wi-Fi throughout the park so you can work remote, stream your favorites,
-              or just keep in touch with the folks back home.
-            </p>
-          </div>
-        </div>
 
         <div class="feature-card fade-in" style="transition-delay:0.1s">
-          <div class="p-6 h-full">
-            <div class="text-2xl mb-2">🚿</div>
-            <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Bathhouse &amp; Laundry</h4>
-            <p class="font-body text-bark/80 text-base leading-relaxed">
-              Clean, well-maintained bathhouse and coin-operated laundry mean you're always
-              fresh — no matter how long the road trip runs.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature-card fade-in" style="transition-delay:0.2s">
-          <div class="p-6 h-full">
-            <div class="text-2xl mb-2">🐾</div>
-            <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Pet Friendly</h4>
-            <p class="font-body text-bark/80 text-base leading-relaxed">
-              Four-legged trail companions are welcome. Open fields and walking paths mean
-              tails will be wagging from the moment you pull in.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature-card fade-in">
-          <div class="p-6 h-full">
-            <div class="text-2xl mb-2">🔥</div>
-            <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Fire Rings &amp; Picnic Areas</h4>
-            <p class="font-body text-bark/80 text-base leading-relaxed">
-              Every site includes a fire ring and picnic table. Pull up a chair and let the
-              evening unfold the way evenings ought to.
-            </p>
-          </div>
-        </div>
-
-        <div class="feature-card fade-in" style="transition-delay:0.1s">
+          <img src="img/sunset.jpeg" alt="Oklahoma sunset views" class="w-full h-44 object-cover" />
           <div class="p-6 h-full">
             <div class="text-2xl mb-2">🌄</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Scenic Oklahoma Views</h4>
@@ -485,12 +446,12 @@
         </div>
 
         <div class="feature-card fade-in" style="transition-delay:0.2s">
-          <div class="p-6 h-full">
+          <img src="img/rv.jpeg" alt="Immaculate grounds" class="w-full h-44 object-cover" />
+          <div class="p-5">
             <div class="text-2xl mb-2">🧹</div>
             <h4 class="font-heading text-bark text-lg uppercase tracking-wide mb-2">Immaculate Grounds</h4>
             <p class="font-body text-bark/80 text-base leading-relaxed">
-              Will and Jamie maintain the park with pride. Expect manicured grounds, clean
-              facilities, and a team that genuinely cares about your stay.
+              Will and Jamie maintain the park with pride. Since we're a new park, we will be adding new features soon, such as an indoor pickleball court and a stocked fishing pond.
             </p>
           </div>
         </div>
@@ -500,13 +461,28 @@
       <!-- Photo strip -->
       <div class="grid grid-cols-3 gap-3 fade-in overflow-hidden rounded-sm">
         <div class="overflow-hidden">
-          <img src="img/8.jpeg"  alt="Ranch life" class="strip-img w-full h-44 object-cover" />
+          <img src="img/8.jpeg"      alt="Ranch life"         class="strip-img w-full h-44 object-cover" style="filter: brightness(1.7) saturate(1.25) contrast(1.22);" />
         </div>
         <div class="overflow-hidden">
-          <img src="img/9.jpeg"  alt="Ranch life" class="strip-img w-full h-44 object-cover" />
+          <img src="img/9.jpeg"      alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
         </div>
         <div class="overflow-hidden">
-          <img src="img/10.jpeg" alt="Ranch life" class="strip-img w-full h-44 object-cover" />
+          <img src="img/10.jpeg"     alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
+        </div>
+        <div class="overflow-hidden">
+          <img src="img/deer.jpeg"   alt="Wildlife at the ranch" class="strip-img w-full h-44 object-cover" />
+        </div>
+        <div class="overflow-hidden">
+          <img src="img/sunset2.jpeg" alt="Oklahoma sunset"   class="strip-img w-full h-44 object-cover" />
+        </div>
+        <div class="overflow-hidden">
+          <img src="img/6.jpeg"      alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
+        </div>
+        <div class="overflow-hidden">
+          <img src="img/campfire.jpeg" alt="Campfire at the ranch" class="strip-img w-full h-44 object-cover" />
+        </div>
+        <div class="overflow-hidden">
+          <img src="img/11.jpeg"     alt="Ranch life"         class="strip-img w-full h-44 object-cover" />
         </div>
       </div>
 
@@ -536,17 +512,17 @@
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row justify-center gap-5 mb-12">
 
-        <a href="tel:+10000000000"
+        <a href="tel:+19182142369"
            class="inline-flex items-center justify-center gap-3 font-heading font-semibold uppercase tracking-widest text-sm px-9 py-4 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
            style="background:#C4903A; color:#2C1810;">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21L8.5 10.5a11.05 11.05 0 005 5l1.113-1.724a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
-          (000) 000-0000
+          (918) 214-2369
         </a>
 
-        <a href="mailto:info@restorationranchrv.com"
+        <a href="mailto:billjohnwilson@gmail.com"
            class="inline-flex items-center justify-center gap-3 font-heading font-semibold uppercase tracking-widest text-sm px-9 py-4 rounded-full border-2 transition-all duration-300 hover:-translate-y-1"
            style="border-color:rgba(245,237,214,0.55); color:#F5EDD6; background:transparent;"
            onmouseover="this.style.background='rgba(196,144,58,0.12)'; this.style.borderColor='#C4903A';"
@@ -555,7 +531,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
           </svg>
-          info@restorationranchrv.com
+          billjohnwilson@gmail.com
         </a>
 
       </div>
