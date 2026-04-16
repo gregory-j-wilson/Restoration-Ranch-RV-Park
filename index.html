@@ -231,6 +231,10 @@
       #hero, #contact { background-attachment: scroll; }
       .gallery-main-img { height: 655px !important; }
     }
+    @media (max-width: 768px) {
+      .about-will-img   { height: 490px !important; }
+      .about-garden-img { height: 420px !important; }
+    }
 
     /* ─── Content images ────────────────────────────────── */
     img {
@@ -259,10 +263,19 @@
        style="text-decoration:none; color:#F5EDD6;">
       Restoration Ranch RV Park
     </a>
-    <div class="flex gap-3">
-      <a href="#about"    class="nav-pill">About</a>
-      <a href="#features" class="nav-pill">Features</a>
-      <a href="#contact"  class="nav-pill">Contact</a>
+    <!-- Hamburger button -->
+    <button id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"
+            style="background:none; border:1px solid rgba(196,144,58,0.45); border-radius:6px; padding:0.35rem 0.55rem; cursor:pointer; display:flex; flex-direction:column; gap:5px; align-items:center; justify-content:center;">
+      <span class="ham-bar" style="display:block; width:22px; height:2px; background:#F5EDD6; border-radius:2px; transition:transform 0.25s, opacity 0.25s;"></span>
+      <span class="ham-bar" style="display:block; width:22px; height:2px; background:#F5EDD6; border-radius:2px; transition:transform 0.25s, opacity 0.25s;"></span>
+      <span class="ham-bar" style="display:block; width:22px; height:2px; background:#F5EDD6; border-radius:2px; transition:transform 0.25s, opacity 0.25s;"></span>
+    </button>
+    <!-- Dropdown -->
+    <div id="nav-dropdown" style="display:none; position:absolute; top:100%; right:0; min-width:160px; background:rgba(28,14,7,0.97); backdrop-filter:blur(10px); border:1px solid rgba(196,144,58,0.3); border-top:none; border-radius:0 0 8px 8px; padding:0.75rem 1rem; flex-direction:column; gap:0.5rem;">
+      <a href="#about"    class="nav-pill" style="display:block; text-align:center;" onclick="closeNav()">About</a>
+      <a href="#features" class="nav-pill" style="display:block; text-align:center;" onclick="closeNav()">Features</a>
+      <a href="#gallery"  class="nav-pill" style="display:block; text-align:center;" onclick="closeNav()">Gallery</a>
+      <a href="#contact"  class="nav-pill" style="display:block; text-align:center;" onclick="closeNav()">Contact</a>
     </div>
   </nav>
 
@@ -297,6 +310,7 @@
     <div class="flex flex-wrap justify-center gap-4">
       <a href="#about"    class="pill-btn">About Us</a>
       <a href="#features" class="pill-btn">Our Features</a>
+      <a href="#gallery"  class="pill-btn">Gallery</a>
       <a href="#contact"  class="pill-btn">Contact Us</a>
     </div>
 
@@ -355,7 +369,7 @@
         <div class="fade-in">
           <div class="relative">
             <img src="img/will.jpeg" alt="Will &amp; Jamie Wilson"
-                 class="rounded-sm shadow-2xl w-full object-cover border-4 border-dust" style="height:390px;" />
+                 class="about-will-img rounded-sm shadow-2xl w-full object-cover border-4 border-dust" style="height:390px;" />
             <!-- Caption badge -->
             <div class="absolute -bottom-4 -right-4 bg-rust text-cream font-heading text-xs uppercase tracking-widest px-4 py-2 rounded-sm shadow-lg">
               Ramona, OK
@@ -398,7 +412,7 @@
 
         <div class="fade-in order-1 md:order-2">
           <img src="img/4.jpeg" alt="Community at the ranch"
-               class="rounded-sm shadow-2xl w-full object-cover h-80 md:h-[390px] border-4 border-dust" />
+               class="about-garden-img rounded-sm shadow-2xl w-full object-cover h-80 md:h-[390px] border-4 border-dust" />
         </div>
 
       </div>
@@ -493,7 +507,7 @@
   <!-- ═══════════════════════════════════════════════════════
        GALLERY
   ════════════════════════════════════════════════════════ -->
-  <section style="background:#1a0e09; border-top: 2px dashed rgba(196,168,130,0.45); border-bottom: 2px dashed rgba(196,168,130,0.45); padding: 3.5rem 0;">
+  <section id="gallery" style="background:#1a0e09; border-top: 2px dashed rgba(196,168,130,0.45); border-bottom: 2px dashed rgba(196,168,130,0.45); padding: 3.5rem 0;">
     <div class="text-center mb-8 fade-in">
       <h2 class="font-display text-cream text-3xl sm:text-4xl tracking-wide" style="text-shadow: 0 2px 12px rgba(0,0,0,0.5);">More from the Ranch&hellip;</h2>
       <hr class="rope-divider mt-4 max-w-xs mx-auto opacity-50" />
@@ -624,6 +638,7 @@
         <a href="#hero"     class="nav-pill" style="font-size:0.7rem;">Home</a>
         <a href="#about"    class="nav-pill" style="font-size:0.7rem;">About</a>
         <a href="#features" class="nav-pill" style="font-size:0.7rem;">Features</a>
+        <a href="#gallery"  class="nav-pill" style="font-size:0.7rem;">Gallery</a>
         <a href="#contact"  class="nav-pill" style="font-size:0.7rem;">Contact</a>
       </nav>
 
@@ -696,6 +711,36 @@
         if (heroTag)   heroTag.style.transform   = `translateY(${shift * 0.65}px)`;
       }
     }, { passive: true });
+
+    // ── Hamburger menu ─────────────────────────────────────
+    const hamburger = document.getElementById('nav-hamburger');
+    const dropdown  = document.getElementById('nav-dropdown');
+    const bars      = hamburger.querySelectorAll('.ham-bar');
+
+    function closeNav() {
+      dropdown.style.display = 'none';
+      hamburger.setAttribute('aria-expanded', 'false');
+      bars[0].style.transform = ''; bars[0].style.opacity = '';
+      bars[1].style.opacity = '1';
+      bars[2].style.transform = '';
+    }
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = dropdown.style.display === 'flex';
+      if (open) {
+        closeNav();
+      } else {
+        dropdown.style.display = 'flex';
+        hamburger.setAttribute('aria-expanded', 'true');
+        bars[0].style.transform = 'translateY(7px) rotate(45deg)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+      }
+    });
+
+    document.addEventListener('click', closeNav);
+    dropdown.addEventListener('click', e => e.stopPropagation());
   </script>
 
 </body>
